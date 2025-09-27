@@ -7,9 +7,12 @@ class btn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey[100],
+
       appBar: AppBar(
 
-        backgroundColor: Colors.orange[200],
+
+        backgroundColor: Colors.orange[500],
         title: Text("Button",
           style: TextStyle(
             fontSize: 30,
@@ -45,7 +48,7 @@ class btn extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 50,
             ),
 
             GestureDetector(
@@ -82,11 +85,16 @@ class btn extends StatelessWidget {
 
 
 
+
+
           ],
 
         ),
 
-      ),
+
+
+
+            ),
 
 
 
