@@ -1,59 +1,133 @@
 import 'package:flutter/material.dart';
 
-class textfield extends StatelessWidget {
-  const textfield({super.key});
+class field extends StatelessWidget {
+  const field({super.key});
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController phone =TextEditingController();
+    TextEditingController pass =TextEditingController();
+
     return Scaffold(
 
-      
-      
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.green,
-        title: Text("This is text Field"),
+appBar: AppBar(
+  backgroundColor: Colors.blueGrey,
+  title: Text("Text_field ",
+  style:
+    TextStyle(
+      fontSize: 50,
+      color: Colors.orange,
 
-      ),
-      body:
-
-
-      Column( mainAxisAlignment: MainAxisAlignment.center
-          ,
-         children: [
-
-           Padding(
-          padding: const EdgeInsets.all(70),
-            child : TextField(
-
-             decoration: InputDecoration(
-               hintText: "Input Name",
-border: OutlineInputBorder(
+  ),),
+  centerTitle: true,
 
 
 
-  borderRadius: BorderRadius.circular(20),
 
 ),
-labelText: "Number",
-               prefixIcon: Icon(Icons.phone),
-               suffixIcon: Icon(Icons.account_box_sharp),
-hintStyle: TextStyle(
-
-  color: Colors.green,
-
-                                ),
-                 labelStyle: TextStyle(
-                   color: Colors.orange
-                 )
-             ),
-             ),
-           )
-
-         ],
 
 
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: TextField(
+                keyboardType: TextInputType.number,
+
+                controller: phone,
+                decoration:
+                InputDecoration(
+                  hintText:"Enter your Number",
+                  labelText: "Phone number",
+                  prefixIcon: Icon(Icons.phone),
+                  suffixIcon: Icon(Icons.add),
+                  hintStyle: TextStyle(
+                    color: Colors.red,
+
+
+                  ),
+
+
+               border: OutlineInputBorder(
+                 borderRadius: BorderRadius.circular(100),
+               )
+
+                ),
+              ),
+            ),
+
+
+
+
+
+
+
+
+
+
+
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: TextField(
+                keyboardType: TextInputType.phone,
+                controller: pass,
+                obscureText: true,
+                decoration:
+                InputDecoration(
+                    hintText:"Enter your Number",
+                    labelText: "PAss",
+                    prefixIcon: Icon(Icons.phone),
+                    suffixIcon: Icon(Icons.add),
+                    hintStyle: TextStyle(
+                      color: Colors.red,
+
+
+                    ),
+
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    )
+
+                ),
+              ),
+            ),
+            
+            
+            ElevatedButton(
+
+
+
+
+
+                onPressed: (){
+                      phone.clear();
+              if(phone.text.isEmpty){
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("Enter number"))
+                );
+
+              }
+                else{
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text("Thank you"))
+                );
+
+              }
+
+            }, child: Text("Submit")),
+            
+
+          ],
         ),
+      ),
+
+
 
 
 

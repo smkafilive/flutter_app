@@ -1,116 +1,152 @@
 import 'package:flutter/material.dart';
 
-class kafi extends StatelessWidget {
-  const kafi({super.key});
+class abc extends StatelessWidget {
+  const abc({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+
       appBar: AppBar(
 
-backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.red,
+        title: Text("Project"),
         centerTitle: true,
 
-        title: Text("This is a Button", style: TextStyle(
-
-          color: Colors.orange[500]
-        ),),
       ),
-      body: Center(
-
-        child: Column(
-
-
-          mainAxisAlignment: MainAxisAlignment.center
-
-          ,
-          children: [
-
-            GestureDetector(
-
-             onLongPress:  (){
-
-                print("Tapped");
-              },
-              child: Text("On TAp button",
-              style: TextStyle(
-                fontSize: 30,
-              )),
-            ),
-
-
-
-
-            SizedBox(
-              height: 60,
-              width: 300,
-
-
-
-              child: ElevatedButton(
-                  style:ElevatedButton.styleFrom(
-
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)
-
-                    ),
-                    backgroundColor: Colors.blueGrey,
-
-                  ),
-
-
-
-                  onPressed: (){}, child: Text("Submit")),
-            ),
-
-            SizedBox(
-
-              height: 100,
-
-              //width: 4000,
-            ),
-
-            SizedBox(
-
-
-              height: 50,
-              width: 200,
-
-
-              child: ElevatedButton(
-                  style:ElevatedButton.styleFrom(
-
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50)
-
-                    ),
-                    backgroundColor: Colors.green,
-                  ),
-
-
-
-                  onPressed: (){}, child: Text("Submit")),
-
-
-            ),
+      body: Column(
+mainAxisAlignment: MainAxisAlignment.center,
+        children: [
 
          Padding(
-           padding: EdgeInsets.only(left: 23,top: 20),
-           child: TextButton(onPressed: (){
-             print("kisu na");
-           }, child: Text("Hi ki koro")),
+           padding: const EdgeInsets.all(15),
+           child: TextField(
+
+             decoration: InputDecoration(
+
+               hintText: "Mobile",
+               labelText: "Enter Number",
+
+                  prefixIcon: Icon(Icons.call),
+               suffixIcon: Icon(Icons.arrow_right),
+               border: OutlineInputBorder(
+                 borderRadius: BorderRadius.circular(50),
+
+
+               )
+
+             ),
+
+
+
+           ),
          ),
 
 
-            
-            
-            
-          ],
+    SizedBox(
+      height: 1,
+    ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: TextField(
+
+              decoration: InputDecoration(
+
+                  hintText: "Mobile",
+                  labelText: "Enter Number",
+
+                  prefixIcon: Icon(Icons.call),
+                  suffixIcon: Icon(Icons.arrow_right),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(500),
+
+
+                  )
+
+              ),
 
 
 
-        ),
+            ),
+          ),
+
+
+ElevatedButton(
+
+    style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.orange,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      )
+    ),
+
+
+    onPressed: (){}, child:
+
+
+
+Text("Submit"))
+,
+
+     SizedBox(
+       height: 20,
+     ),
+     Container(
+
+alignment: Alignment.center,
+       height: 50,
+width: 200,
+
+       decoration: BoxDecoration(
+
+         color: Colors.orange,
+            borderRadius: BorderRadius.circular(20),
+         border: Border.all(
+           width: 2,
+           color: Colors.blueGrey
+         ),
+
+
+         boxShadow: [
+
+
+           BoxShadow(
+             color: Colors.grey.withOpacity(1),
+             offset: Offset(7, 3),
+           ),
+         ],
+       ),
+       child: Text("This is a container"),
+
+     )  ,
+
+
+
+
+        ],
+
+
+
+
+
+
+
+
       ),
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
